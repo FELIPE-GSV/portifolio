@@ -73,7 +73,7 @@ export function Hero() {
                 src="/profile.jpeg"
                 alt="Felipe Valente"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_70%]"
                 priority
                 sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
               />
