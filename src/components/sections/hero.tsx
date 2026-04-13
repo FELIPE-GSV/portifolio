@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { MagneticButton } from "@/components/ui/magnetic-button";
@@ -60,48 +61,69 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 max-w-3xl text-center"
+        className="relative z-10 flex flex-col items-center gap-10 lg:flex-row lg:gap-16 lg:text-left"
       >
-        <motion.p
-          variants={itemVariants}
-          className="mb-4 font-mono text-sm text-accent-1"
-        >
-          Olá, meu nome é
-        </motion.p>
-
-        <motion.h1
-          variants={itemVariants}
-          className="gradient-text text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
-        >
-          Felipe Valente
-        </motion.h1>
-
-        <motion.p
-          variants={itemVariants}
-          className="mt-4 text-2xl font-medium text-muted sm:text-3xl md:text-4xl"
-        >
-          Desenvolvedor Fullstack
-        </motion.p>
-
-        <motion.p
-          variants={itemVariants}
-          className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
-        >
-          Especializado em React, Django e Node.js. Construo aplicações web
-          completas com foco em performance, experiência do usuário e código limpo.
-        </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
-          <MagneticButton href="#projects" variant="primary">
-            Ver Projetos
-          </MagneticButton>
-          <MagneticButton href="#contact" variant="outline">
-            Entre em Contato
-          </MagneticButton>
+        {/* Photo */}
+        <motion.div variants={itemVariants} className="shrink-0">
+          <div className="relative">
+            {/* Glow ring */}
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent-1 via-accent-2 to-accent-3 opacity-60 blur-md" />
+            <div className="relative h-48 w-48 overflow-hidden rounded-full border-2 border-card-border sm:h-56 sm:w-56 md:h-64 md:w-64">
+              <Image
+                src="/profile.jpeg"
+                alt="Felipe Valente"
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+              />
+            </div>
+          </div>
         </motion.div>
+
+        {/* Text content */}
+        <div className="text-center lg:text-left">
+          <motion.p
+            variants={itemVariants}
+            className="mb-4 font-mono text-sm text-accent-1"
+          >
+            Olá, meu nome é
+          </motion.p>
+
+          <motion.h1
+            variants={itemVariants}
+            className="gradient-text text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
+          >
+            Felipe Valente
+          </motion.h1>
+
+          <motion.p
+            variants={itemVariants}
+            className="mt-4 text-2xl font-medium text-muted sm:text-3xl md:text-4xl"
+          >
+            Desenvolvedor Fullstack
+          </motion.p>
+
+          <motion.p
+            variants={itemVariants}
+            className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+          >
+            Especializado em React, Django e Node.js. Construo aplicações web
+            completas com foco em performance, experiência do usuário e código limpo.
+          </motion.p>
+
+          <motion.div
+            variants={itemVariants}
+            className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:justify-start"
+          >
+            <MagneticButton href="#projects" variant="primary">
+              Ver Projetos
+            </MagneticButton>
+            <MagneticButton href="#contact" variant="outline">
+              Entre em Contato
+            </MagneticButton>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Scroll indicator */}
