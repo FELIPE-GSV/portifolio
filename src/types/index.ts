@@ -19,6 +19,7 @@ export interface Project {
   image?: string;
   liveUrl?: string;
   githubUrl?: string;
+  category?: "web" | "mobile";
 }
 
 export interface NavItem {

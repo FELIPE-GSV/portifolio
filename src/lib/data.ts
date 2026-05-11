@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
     period: "Jan 2024 — Jan 2025",
     description: [
       "Desenvolvimento de sistemas web para apoio a projetos acadêmicos, envolvendo integração entre frontend, backend e banco de dados SQL.",
-      "Participação em projetos de pesquisa e desenvolvimento no IFAM, com foco na criação de soluções web fullstack utilizando JavaScript, React e Django Rest Framework.",
+      "Participação em projetos de pesquisa e desenvolvimento no IFAM, com foco em soluções web fullstack com JavaScript, React e Django Rest Framework.",
       "Containerização de aplicações com Docker para padronização de ambientes e facilitação de deploy.",
     ],
     technologies: ["React", "Django", "JavaScript", "Docker", "SQL"],
@@ -63,31 +63,35 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    title: "Dashboard de Gestão",
+    title: "Abarechat Mobile",
     description:
-      "Sistema de gestão com dashboard interativo, gráficos em tempo real e gerenciamento de dados. Interface moderna e responsiva com autenticação e controle de acesso.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
-    githubUrl: "#",
+      "App mobile de rede social com feed de posts, comentários, perfis de usuário, sistema de seguidores, chat em tempo real via WebSocket, upload e edição de mídia (imagens e vídeos), notificações em tempo real e deep links para compartilhamento de posts.",
+    technologies: ["Flutter", "Dart", "Socket.IO", "Provider"],
+    githubUrl: "https://github.com/FELIPE-GSV",
+    category: "mobile",
   },
   {
-    title: "E-commerce API",
+    title: "Netpoli Mobile",
     description:
-      "API RESTful completa para e-commerce com autenticação JWT, sistema de pagamentos, gestão de estoque e documentação automatizada com Swagger.",
-    technologies: ["Django", "Python", "PostgreSQL", "Docker"],
-    githubUrl: "#",
+      "App mobile da plataforma Netpoli com onboarding completo, feed de conteúdo, criação de projetos, compressão e edição de imagens, suporte a vídeo, sistema de busca e navegação em 5 abas. Tema verde com suporte a dark/light mode.",
+    technologies: ["Flutter", "Dart", "Provider", "fl_chart"],
+    githubUrl: "https://github.com/FELIPE-GSV",
+    category: "mobile",
   },
   {
-    title: "App de Chat em Tempo Real",
+    title: "Netpoli Web",
     description:
-      "Aplicação de mensagens em tempo real com WebSocket, suporte a múltiplas salas, envio de arquivos e notificações push.",
-    technologies: ["Next.js", "TypeScript", "WebSocket", "Tailwind"],
-    githubUrl: "#",
+      "Versão web da plataforma Netpoli com rota protegida por auth guard, feed com scroll infinito, atualizações otimistas com useOptimistic do React 19, suporte a imagem e vídeo, layout com AppShell (header + sidebar) e dark/light theme.",
+    technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    githubUrl: "https://github.com/FELIPE-GSV",
+    category: "web",
   },
   {
-    title: "App Mobile de Tarefas",
+    title: "Crash Game",
     description:
-      "Aplicativo mobile multiplataforma para gerenciamento de tarefas com sincronização em nuvem, notificações e modo offline.",
-    technologies: ["Flutter", "Firebase", "Dart"],
-    githubUrl: "#",
+      "Plataforma de cassino multiplayer em tempo real com dois microsserviços (Games e Wallets), comunicação assíncrona via RabbitMQ, autenticação via Keycloak (PKCE + JWT), gateway Kong, mecânica de jogo \"provably fair\", sincronização via WebSocket e orquestração via Docker Compose.",
+    technologies: ["React 19", "NestJS", "PostgreSQL", "RabbitMQ", "Keycloak", "Socket.IO", "Kong"],
+    githubUrl: "https://github.com/FELIPE-GSV",
+    category: "web",
   },
 ];
