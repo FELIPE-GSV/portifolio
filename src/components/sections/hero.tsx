@@ -22,7 +22,7 @@ function LinkedinIcon({ size = 20, className = "" }: { size?: number; className?
 }
 
 const STATS = [
-  { value: "02+", label: "Anos de\nExperiência" },
+  { value: "03+", label: "Anos de\nExperiência" },
   { value: "03+", label: "Empresas\nAtendidas" },
   { value: "10+", label: "Tecnologias\nDominadas" },
 ];
